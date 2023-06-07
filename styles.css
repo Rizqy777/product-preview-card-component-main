@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* ### Primary */
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+/* ### Neutral */
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 14px;
+    background-color: var(--Cream);
+    
+}
+.container_card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40%;
+    height: 60%;
+    min-width: 400px;
+    background-color: var(--White);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container_img{
+    width: 100%;
+    height: 100%;  
+}
+.img_perfume{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.container_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+}
+.head{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+.title{
+    font-family: 'Fraunces', serif;
+}
+.text{
+    font-family: 'Montserrat', sans-serif;
+}
+.head, .text{
+    color: var(--Dark-grayish-blue);
+}
+.container_price{
+    display: flex;
+    align-items: center;   
+}
+.price_on{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+    margin-right: 10px;
+}
+.price_off{
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+}
+.button{
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--Dark-cyan);
+    text-decoration: none;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.button:hover{
+    background-color: hsl(158, 35%, 30%);
+}
+.icon_card{
+    margin-right: 10px;
+}
+.attribution{
+    position: absolute;
+    bottom: 0;
+}
+@media (max-width: 500px){
+    .container_card{
+        width: 90%;
+        height: 90%;
+        min-width: 200px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 100px 200px;
+    }
+    .container_img{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        width: 100%;
+        height: 100%;
+    }
+    .img_perfume{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
